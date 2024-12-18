@@ -19,13 +19,13 @@ Submissions are scored based on the quadratic weighted kappa, which measures the
 
 To compute the quadratic weighted kappa, we construct three matrices, O, W, and E, with N the number of distinct labels.
 
-The matrix \$O\$ is an \$NxN\$ histogram matrix such that \$O_i,j\$   corresponds to the number of instances that have an actual value \$i\$ and a predicted value \$j\$.
+The matrix \$O\$ is an \$NxN\$ histogram matrix such that \$O_{i,j}\$   corresponds to the number of instances that have an actual value \$i\$ and a predicted value \$j\$.
 
-The matrix $\W\$ is an $\NxN\$ matrix of weights, calculated based on the squared difference between actual and predicted values: $\W_{i,j} = (i−j)^2(N−1)^2\$
+The matrix \$W\$ is an \$NxN\$ matrix of weights, calculated based on the squared difference between actual and predicted values: \$\W_{i,j} = (i−j)^2(N−1)^2\$
 
-The matrix $\E$ is an $\NxN\$ histogram matrix of expected outcomes, calculated assuming that there is no correlation between values. This is calculated as the outer product between the actual histogram vector of outcomes and the predicted histogram vector, normalized such that $\E$ and $\O$ have the same sum.
+The matrix \$E$ is an \$NxN\$ histogram matrix of expected outcomes, calculated assuming that there is no correlation between values. This is calculated as the outer product between the actual histogram vector of outcomes and the predicted histogram vector, normalized such that \$E$ and \$O$ have the same sum.
 
 From these three matrices, the quadratic weighted kappa is calculated as: 
 
-$\κ=1−∑_{i,j} W_{i,j} O_{i,j} ∑_{i,j} W_{i,j}E_{i,j}\$.
+\$κ=1−∑_{i,j} W_{i,j} O_{i,j} ∑_{i,j} W_{i,j}E_{i,j}\$.
 Your work will contribute to a healthier, happier future where children are better equipped to navigate the digital landscape responsibly.
