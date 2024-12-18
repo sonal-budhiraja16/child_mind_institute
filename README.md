@@ -19,7 +19,7 @@ Submissions are scored based on the quadratic weighted kappa, which measures the
 
 To compute the quadratic weighted kappa, we construct three matrices, O, W, and E, with N the number of distinct labels.
 
-The matrix $\O\$ is an $\NxN\$ histogram matrix such that $\O_i,j\$   corresponds to the number of instances that have an actual value $\i\$ and a predicted value $\j\$.
+The matrix \$O\$ is an \$NxN\$ histogram matrix such that \$O_i,j\$   corresponds to the number of instances that have an actual value \$i\$ and a predicted value \$j\$.
 
 The matrix $\W\$ is an $\NxN\$ matrix of weights, calculated based on the squared difference between actual and predicted values: $\W_{i,j} = (i−j)^2(N−1)^2\$
 
