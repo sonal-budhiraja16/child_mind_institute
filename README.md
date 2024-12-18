@@ -15,13 +15,14 @@ This competition challenges you to develop a predictive model capable of analyzi
 
 
 **Evaluation**
+
 Submissions are scored based on the quadratic weighted kappa, which measures the agreement between two outcomes. This metric typically varies from 0 (random agreement) to 1 (complete agreement). In the event that there is less agreement than expected by chance, the metric may go below 0.
 
-To compute the quadratic weighted kappa, we construct three matrices, \$O\4, \$W\$, and \$E\$, with \$N\$ the number of distinct labels.
+To compute the quadratic weighted kappa, we construct three matrices, \$O\$, \$W\$, and \$E\$, with \$N\$ the number of distinct labels.
 
 The matrix \$O\$ is an \$NxN\$ histogram matrix such that \$O_{i,j}\$   corresponds to the number of instances that have an actual value \$i\$ and a predicted value \$j\$.
 
-The matrix \$W\$ is an \$NxN\$ matrix of weights, calculated based on the squared difference between actual and predicted values: \$\W_{i,j} = (i−j)^2(N−1)^2\$
+The matrix \$W\$ is an \$NxN\$ matrix of weights, calculated based on the squared difference between actual and predicted values: \$W_{i,j} = (i−j)^2(N−1)^2\$
 
 The matrix \$E$ is an \$NxN\$ histogram matrix of expected outcomes, calculated assuming that there is no correlation between values. This is calculated as the outer product between the actual histogram vector of outcomes and the predicted histogram vector, normalized such that \$E$ and \$O$ have the same sum.
 
